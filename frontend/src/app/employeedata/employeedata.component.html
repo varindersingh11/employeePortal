@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+  <title>Employee data</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+<table class="table table-bordered">
+                    <tr>
+                        <th style="width:12%">First Name</th>
+                        <th style="width:12%">Last Name</th>
+                        <th style="width:12%">Date of Birth</th> 
+                        <th style="width:12%">Gender</th>
+                        <th style="width:12%"> Department</th>
+                    </tr>
+                    <tr *ngFor="let employee of employeesList;">
+                        <td>{{employee.firstName}}</td>
+                        <td>{{employee.lastName}}</td>
+                        <td>{{employee.dateOfBirth | date: 'dd/MM/yyyy'}}</td>
+                        <td>{{employee.gender}}</td>
+                        <td>{{employee.department}}</td>
+                    </tr>
+                </table>
+              </div>
+</body>

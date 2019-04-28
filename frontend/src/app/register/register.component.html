@@ -1,0 +1,39 @@
+<div class="container" *ngIf="!showSuccessMsg">
+    <div class="logo">Register an Employee!</div>
+    <div class="register-item">
+      <form #myform="ngForm" (ngSubmit)="onSubmit(myform.value)" class="form form-register" ngNativeValidate>
+        <div class="form-field">
+              <label class="user" for="firstName"><span class="hidden">First Name</span></label>
+              <input name="firstName" id="firstName" type="text" class="form-input" placeholder="First Name" [(ngModel)]="firstName" required>
+        </div>
+        <div class="form-field">
+            <label class="user" for="lastName"><span class="hidden">Last Name</span></label>
+            <input name="lastName" id="lastName" type="text" class="form-input" placeholder="Last Name" [(ngModel)]="lastName" required>
+      </div>
+      <div class="form-field">
+          <label class="user" for="dateOfBirth"><span class="hidden">DOB</span></label>
+          <input name="dateOfBirth" id="dateOfBirth" type="date" class="form-input" placeholder="DOB(MM/DD/YYYY)" [(ngModel)]="dateOfBirth" required>
+    </div>
+    <div class="form-field">
+          <label class="user" for="gender"><span class="hidden">Gender</span></label>
+          <input name="gender" id="gender" type="text" class="form-input" placeholder="Enter M or F" [(ngModel)]="gender" required>
+        </div>
+
+        <div class="form-field">
+          <label class="lock" for="department"><span class="hidden">Department</span></label>
+          <input name="department" id="department" type="text" class="form-input" placeholder="Department" [(ngModel)]="department" required>
+        </div>
+
+        <div class="form-field">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+</div>
+
+<div *ngIf="showSuccessMsg">
+<h3> Employee Registered Successfully!!</h3>
+Please click on <a rel="noopener"  [routerLink]="['/register']">Register Link</a> for registering a new Employee <br/>
+  Please click on <a  rel="noopener" [routerLink]="['/list']" >Employee List</a> for viewing list of employees <br/> 
+</div>
+
