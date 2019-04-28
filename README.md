@@ -5,6 +5,7 @@
 1. import the project in eclipse using git clone
 2. Run EmployeePortalApplication as java application
 3. It will run application on localhost:8080 server
+4. Data is saving into in-memory database
 
 
 End points:
@@ -18,7 +19,8 @@ http://localhost:8080/api/getEmployees
 
 1. Import the UI project in your favorite browser
 2. Jump into project directory
-3. npm start
+3. npm install
+4. npm start
 4. Application will run on 4200 port
 
 
